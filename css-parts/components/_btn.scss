@@ -1,0 +1,114 @@
+/*----------------------------------------
+    BUTTONS
+-----------------------------------------*/
+.button {
+   font-size: 1.5rem;
+   font-weight: 600;
+   text-transform: uppercase;
+   text-decoration: none;
+   letter-spacing: 3px;
+   line-height: 150%;
+   text-align: center;
+   display: inline-block;
+   padding: 1.8rem 2.4rem;
+   transition: all 0.3s ease-in-out;
+
+   border-radius: 8px;
+   border-style: solid;
+   border-width: 2px;
+
+   @media #{$large} {
+      font-size: 1.6rem;
+      padding: 2rem 3.2rem;
+   }
+
+   // positive
+   &.button-primary.button-positive {
+      background-color: $color-400; //fallback bg color
+      background-image: linear-gradient(
+         90deg,
+         rgba(36, 183, 172, 1) 0%,
+         rgba(27, 127, 120, 1) 100%
+      );
+      border-color: $color-200;
+      color: $color-white;
+
+      &:hover {
+         border-color: $color-300;
+         opacity: 0.8;
+      }
+   }
+   &.button-secondary.button-positive {
+      border-color: rgba($color-black, 0.64);
+      background-color: transparent;
+      color: $color-txt-primary;
+
+      &:hover {
+         border-color: rgba($color-black, 0.32);
+         background-color: rgba($color-black, 0.04);
+         color: $color-txt-secondary;
+      }
+   }
+
+   // negative
+   &.button-primary.button-negative {
+      border-color: $color-white;
+      background-color: $color-white;
+      color: $color-txt-primary;
+
+      &:hover {
+         border-color: rgba($color-white, 0.48);
+         background-color: rgba($color-white, 0.16);
+         color: $color-white;
+         box-shadow: -2px 0px 10px rgb(33 156 147 / 20%),
+            0px 0px 20px rgb(36 183 72 / 20%),
+            2px 0px 10px rgb(235 212 169 / 20%);
+      }
+   }
+
+   &.button-secondary.button-negative {
+      border-color: $color-white;
+      background-color: transparent;
+      color: $color-white;
+
+      &:hover {
+         border-color: rgba($color-white, 0.48);
+         background-color: rgba($color-white, 0.16);
+         color: $color-white;
+         box-shadow: -2px 0px 14px rgb(33 156 147 / 20%),
+            0px 0px 14px rgb(36 183 72 / 20%),
+            2px 0px 14px rgb(235 212 169 / 20%);
+      }
+   }
+}
+
+// ancor button
+a.button[href^="#"] {
+   max-height: 6.25rem;
+
+   @media #{$large} {
+      max-height: 6.8rem;
+   }
+
+   &:after {
+      margin-left: 1.2rem;
+      vertical-align: middle;
+      margin-top: 2px;
+      display: inline-block;
+   }
+
+   // svg bianca
+   &.button-secondary.button-negative:after,
+   &.button-primary.button-positive:after {
+      content: url("data:image/svg+xml,%3Csvg width='15' height='16' viewBox='0 0 15 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.8' fill-rule='evenodd' clip-rule='evenodd' d='M6.48153 12.7866V0H8.51847V12.7866L13.2614 8.4037C13.6591 8.03615 14.304 8.03615 14.7017 8.4037C15.0994 8.77125 15.0994 9.36717 14.7017 9.73473L8.22017 15.7243C7.82243 16.0919 7.17757 16.0919 6.77983 15.7243L0.298304 9.73473C-0.0994347 9.36717 -0.0994347 8.77125 0.298304 8.4037C0.696043 8.03615 1.3409 8.03615 1.73864 8.4037L6.48153 12.7866Z' fill='white'/%3E%3C/svg%3E");
+   }
+
+   // svg nera
+   &.button-primary.button-negative:after,
+   &.button-secondary.button-positive:after {
+      content: url("data:image/svg+xml,%3Csvg width='15' height='17' viewBox='0 0 15 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.8' fill-rule='evenodd' clip-rule='evenodd' d='M6.48153 13.5858V0H8.51847V13.5858L13.2614 8.92893C13.6591 8.53841 14.304 8.53841 14.7017 8.92893C15.0994 9.31946 15.0994 9.95262 14.7017 10.3431L8.22017 16.7071C7.82243 17.0976 7.17757 17.0976 6.77983 16.7071L0.298304 10.3431C-0.0994347 9.95262 -0.0994347 9.31946 0.298304 8.92893C0.696043 8.53841 1.3409 8.53841 1.73864 8.92893L6.48153 13.5858Z' fill='%231F1D1D'/%3E%3C/svg%3E");
+   }
+   &.button-primary.button-negative:hover:after {
+      filter: invert(1);
+   }
+}

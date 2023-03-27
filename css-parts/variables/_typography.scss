@@ -1,0 +1,96 @@
+$font-family-primary: "Inter", sans-serif;
+
+body {
+   font-family: $font-family-primary;
+}
+
+/*--------------------------------------------------
+Type scale
+--------------------------------------------------*/
+h1 {
+   font-size: clamp(5.6rem, 10vw, 9.6rem);
+   font-weight: 600;
+   line-height: 110%;
+   color: $color-white;
+
+   @media #{$xxlarge} {
+      line-height: 105%;
+   }
+   @media #{$xxxlarge} {
+      font-size: 11.2rem;
+   }
+}
+
+h2 {
+   font-size: clamp(3.2rem, 5vw, 5rem);
+   font-weight: 600;
+   letter-spacing: -1.5px;
+   line-height: 120%;
+   color: $color-txt-primary;
+}
+
+h3 {
+   font-size: 2.6rem;
+   color: $color-txt-primary;
+   font-weight: 600;
+   line-height: 130%;
+
+   @media #{$large} {
+      font-size: 3.2rem;
+   }
+}
+
+.overtitle {
+   color: $color-400; //fallback color
+   font-size: 1.6rem;
+   font-weight: 500;
+   text-transform: uppercase;
+   letter-spacing: 4px;
+   line-height: 140%;
+   max-width: 90rem;
+   margin-bottom: 1.2rem;
+
+   span {
+      background-color: $color-400; //fallback bg color
+      background-image: linear-gradient(
+         90deg,
+         rgba(36, 183, 172, 1) 0%,
+         rgba(27, 127, 120, 1) 80%
+      );
+      background-size: 100%;
+      background-repeat: repeat;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+   }
+
+   @media #{$large} {
+      font-size: 1.8rem;
+      margin-bottom: 1.6rem;
+   }
+}
+
+p {
+   color: $color-txt-secondary;
+   font-size: 1.6rem;
+   line-height: 160%;
+
+   @media #{$large} {
+      font-size: 1.8rem;
+   }
+}
+
+/*--------------------------------------------------
+CORRECTIONS
+--------------------------------------------------*/
+.t-center {
+   text-align: center;
+}
+.t-mobile-center {
+   text-align: center;
+
+   @media #{$xxsmall} {
+      text-align: left;
+   }
+}

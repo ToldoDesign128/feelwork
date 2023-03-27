@@ -1,0 +1,95 @@
+/*--------------------------------------------------
+    MARGIN
+--------------------------------------------------*/
+.mb-200 {
+   margin-bottom: 20rem;
+}
+.mb-200-r {
+   //between section
+   margin-bottom: 10rem;
+   @media #{$large} {
+      margin-bottom: 20rem;
+   }
+}
+
+.mb-160 {
+   margin-bottom: 16rem;
+}
+.mb-160-r {
+   margin-bottom: 8rem;
+   @media #{$large} {
+      margin-bottom: 16rem;
+   }
+}
+
+.mb-120-r {
+   margin-bottom: 6rem;
+   @media #{$large} {
+      margin-bottom: 12rem;
+   }
+}
+
+.mb-80 {
+   margin-bottom: 8rem;
+}
+.mb-80-r {
+   margin-bottom: 4.8rem;
+   @media #{$large} {
+      margin-bottom: 8rem;
+   }
+}
+
+.mb-40 {
+   margin-bottom: 4rem;
+}
+.mb-40-r {
+   margin-bottom: 3.2rem;
+   @media #{$large} {
+      margin-bottom: 4rem;
+   }
+}
+
+.mb-24-r {
+   margin-bottom: 1.6rem;
+   @media #{$large} {
+      margin-bottom: 2.4rem;
+   }
+}
+
+// Spacer block
+.spacer-xl {
+   height: 10rem;
+   @media #{$large} {
+      height: 20rem;
+   }
+}
+.spacer-l {
+   height: 8rem;
+   @media #{$large} {
+      height: 16rem;
+   }
+}
+.spacer-m {
+   height: 6rem;
+   @media #{$large} {
+      height: 12rem;
+   }
+}
+.spacer-s {
+   height: 4.8rem;
+   @media #{$large} {
+      height: 8rem;
+   }
+}
+.spacer-xs {
+   height: 3.2rem;
+   @media #{$large} {
+      height: 4rem;
+   }
+}
+.spacer-xxs {
+   height: 1.6rem;
+   @media #{$large} {
+      height: 2.4rem;
+   }
+}

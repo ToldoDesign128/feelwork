@@ -1,0 +1,228 @@
+.form {
+   h2 {
+      max-width: 90rem;
+      margin-bottom: 6.4rem;
+
+      @media #{$large} {
+         margin-bottom: 8rem;
+      }
+   }
+
+   .custom-form {
+      .wpcf7 {
+         label {
+            display: inline-block;
+            width: 100%;
+            color: $color-txt-secondary;
+            font-weight: 500;
+            font-size: 2.2rem;
+            margin-right: 2.4rem;
+
+            @media #{$large} {
+               font-size: 2.8rem;
+            }
+
+            .wpcf7-form-control-wrap {
+               display: inline-block;
+               margin: 1.6rem 0 4.8rem;
+               width: 100%;
+
+               @media #{$large} {
+                  margin: 2.4rem 0 5.6rem;
+               }
+
+               .wpcf7-form-control {
+                  width: 100%;
+                  background-color: rgba($color-black, 0.06);
+                  padding: 2.4rem 2.8rem;
+                  border: none;
+                  border-radius: 12px;
+                  font-size: 1.6rem;
+                  color: $color-txt-secondary;
+
+                  @media #{$large} {
+                     font-size: 1.8rem;
+                  }
+
+                  &:focus-visible {
+                     outline-color: $color-300;
+                  }
+
+                  &.wpcf7-textarea,
+                  &.wpcf7-text {
+                     font-family: $font-family-primary;
+                  }
+               }
+            }
+         }
+
+         //Iubenda privacy checkbox
+         label.cf7-custom-iubenda {
+            display: inline-flex !important;
+            margin-bottom: 1.6rem;
+            position: relative !important;
+
+            span.wpcf7-form-control-wrap {
+               margin: 0 !important;
+               min-width: auto !important;
+               position: static !important;
+               align-self: center;
+
+               .wpcf7-form-control.wpcf7-acceptance {
+                  padding: 0;
+                  background-color: transparent;
+
+                  .wpcf7-list-item {
+                     margin: 0;
+                  }
+               }
+            }
+
+            .iubenda-embed:not(.iubenda-nostyle) {
+               color: $color-txt-secondary !important;
+               background-color: transparent !important;
+               font-family: $font-family-primary !important;
+               font-weight: 400 !important;
+               font-size: 16px !important;
+               text-decoration: none !important;
+               box-shadow: none !important;
+               transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+
+               &:hover {
+                  box-shadow: none !important;
+                  text-decoration: underline !important;
+                  text-decoration: underline !important;
+                  text-decoration-thickness: 2px !important;
+                  text-underline-offset: 5px !important;
+               }
+            }
+         }
+
+         label.cf7-custom-iubenda {
+            display: inline-flex !important;
+            margin-bottom: 4.8rem;
+
+            span.wpcf7-form-control-wrap {
+               width: auto;
+
+               .wpcf7-acceptance {
+                  margin: 1.6rem 0 4rem;
+                  padding: 0;
+                  background-color: transparent;
+
+                  .wpcf7-list-item {
+                     margin-left: 0;
+                  }
+               }
+               input[type="checkbox"] {
+                  margin: 0;
+                  transform: scale(1.6);
+                  accent-color: $color-300;
+               }
+            }
+
+            .iubenda-embed:not(.iubenda-nostyle) {
+               color: $color-txt-secondary !important;
+               background-color: transparent !important;
+               font-family: $font-family-primary !important;
+               font-weight: 400 !important;
+               font-size: 16px !important;
+               text-decoration: none !important;
+               box-shadow: none !important;
+               padding: 0 !important;
+               margin-left: 2.8rem !important;
+               padding-top: 0.6rem !important;
+
+               &:hover {
+                  box-shadow: none !important;
+                  text-decoration: underline !important;
+                  text-decoration-thickness: 2px !important;
+                  text-underline-offset: 4px !important;
+                  text-decoration-color: $color-300 !important;
+               }
+
+               &::selection {
+                  background: transparent;
+                  color: $color-txt-secondary;
+               }
+            }
+         }
+
+         //submit btn
+         input[type="submit"] {
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 3px;
+            line-height: 150%;
+            text-align: center;
+            display: inline-block;
+            padding: 1.8rem 3.2rem;
+            transition: all 0.3s ease-in-out;
+
+            border-radius: 8px;
+            border-style: solid;
+            border-width: 2px;
+
+            background-color: $color-400; //fallback bg color
+            background-image: linear-gradient(
+               90deg,
+               rgba(36, 183, 172, 1) 0%,
+               rgba(27, 127, 120, 1) 100%
+            );
+            border-color: $color-200;
+            color: $color-white;
+
+            &:hover {
+               border-color: $color-300;
+               opacity: 0.8;
+            }
+
+            /*iOS input height fix*/
+            box-sizing: border-box !important;
+            height: 6.25rem !important;
+            -webkit-appearance: none !important;
+
+            &:disabled {
+               filter: grayscale(0.9);
+               opacity: 0.4;
+               border-color: $color-black;
+               color: $color-black;
+            }
+         }
+
+         span.wpcf7-spinner {
+            background-color: $color-400;
+            vertical-align: middle;
+            margin-block: 1.2rem;
+         }
+
+         span.wpcf7-not-valid-tip {
+            font-size: 1.6rem;
+            color: $color-300;
+            margin-top: 1.2rem;
+            margin-left: 0rem;
+         }
+
+         form .wpcf7-response-output,
+         .wpcf7 form.invalid .wpcf7-response-output,
+         .wpcf7 form.unaccepted .wpcf7-response-output,
+         .wpcf7 form.payment-required .wpcf7-response-output {
+            border-color: $color-white;
+            margin: 3.2rem 0 4rem;
+            padding-left: 0;
+            color: $color-txt-secondary;
+         }
+
+         // after send
+         form.sent {
+            p {
+               filter: grayscale(0.9);
+               opacity: 0.4;
+               pointer-events: none;
+            }
+         }
+      }
+   }
+}

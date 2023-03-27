@@ -1,0 +1,24 @@
+.blocco-immagine {
+   .col-12 {
+      display: grid;
+   }
+
+   figure {
+      max-height: 58vh;
+      overflow: hidden;
+
+      @media #{$large} {
+         max-height: 84vh;
+      }
+
+      img {
+         display: block;
+         height: 100%;
+         object-fit: cover;
+         border-radius: 16px;
+         @media #{$xlarge} {
+            border-radius: 24px;
+         }
+      }
+   }
+}

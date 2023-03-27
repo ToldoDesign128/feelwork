@@ -1,0 +1,34 @@
+.spacer-block{
+    display: inline-block;
+    
+    &.spacer-xs{ //mb-32-r
+        margin-bottom: 2.4rem;
+        @media #{$large}{
+            margin-bottom: 3.2rem;
+        }
+    }
+    &.spacer-s{ //mb-64-r
+        margin-bottom: 3.2rem;
+        @media #{$large}{
+            margin-bottom: 6.4rem;
+        }
+    }
+    &.spacer-m{ //mb-80-r
+        margin-bottom: 4.8rem;
+        @media #{$large}{
+            margin-bottom: 8rem;
+        }
+    }
+    &.spacer-l{ //mb-180-r
+        margin-bottom: 9rem;
+        @media #{$large}{
+            margin-bottom: 18rem;
+        }
+    }
+    &.spacer-xl{ //mb-240-r
+        margin-bottom: 12rem;
+        @media #{$large}{
+            margin-bottom: 24rem;
+        }
+    }
+}

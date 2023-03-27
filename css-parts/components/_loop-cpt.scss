@@ -1,0 +1,205 @@
+$origin-border: 16px;
+$origin-border-lg: 24px;
+$border-w: 4px;
+$border-w-lg: 6px;
+$card-p: 1.6rem;
+$card-p-lg: 3.2rem;
+
+.loop-cpt {
+   article {
+      padding: calc(#{$border-w} * -1);
+      border-radius: $origin-border;
+      isolation: isolate; //safari fix
+      overflow: hidden;
+      margin-bottom: 4rem;
+      position: relative;
+
+      @media #{$large} {
+         padding: calc(#{$border-w-lg} * -1);
+         border-radius: $origin-border-lg;
+      }
+
+      &:before {
+         content: "";
+         position: absolute;
+         left: 0;
+         top: 0;
+         z-index: -1;
+         background-color: $color-300;
+         background: linear-gradient(
+            15deg,
+            rgba(31, 29, 29, 1) 30%,
+            rgba(36, 183, 172, 1) 100%
+         );
+
+         width: 200%;
+         height: 200%;
+         transition: transform 1s ease-out 0.4s;
+         // &.in-viewport-once:before {
+         transform: translate(-50%, 0);
+         // }
+      }
+   }
+   .col-12:last-of-type article {
+      margin-bottom: 0;
+   }
+
+   .cpt {
+      display: block;
+      text-decoration: none;
+      overflow: hidden;
+      padding: $card-p;
+      margin: $border-w;
+      background-color: $color-white;
+      border-radius: calc(#{$origin-border} - (#{$border-w} / 2) - 1px);
+      transition: background-color 0.4s ease-in;
+
+      @media #{$large} {
+         padding: $card-p-lg;
+         margin: $border-w-lg;
+         border-radius: calc(
+            #{$origin-border-lg} - (#{$border-w-lg} / 2) - 1px
+         );
+      }
+   }
+
+   .flex-wrap {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 1.2rem;
+
+      @media #{$medium} {
+         flex-direction: row;
+         gap: 2.4rem;
+         justify-content: space-between;
+      }
+
+      @media #{$large} {
+         gap: 4rem;
+      }
+
+      .content {
+         align-self: flex-start;
+
+         @media #{$medium} {
+            align-self: center;
+            flex-basis: 70%;
+
+            // align-self: stretch;
+            // display: flex;
+            // justify-content: space-between;
+            // flex-direction: column;
+         }
+
+         @media #{$xxlarge} {
+            flex-basis: 60%;
+         }
+
+         .label {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.4rem;
+            margin-bottom: 0.4rem;
+
+            @media #{$medium} {
+               font-size: 1.6rem;
+            }
+         }
+
+         h3 {
+            font-size: 2.4rem;
+            margin-bottom: 0.6rem;
+
+            @media #{$large} {
+               font-size: 3.2rem;
+               margin-bottom: 1rem;
+            }
+         }
+
+         .excerpt {
+            font-size: 1.4rem;
+
+            @media #{$medium} {
+               font-size: 1.8rem;
+            }
+         }
+
+         // .button.button-primary.button-positive {
+         //    margin-top: 0.8rem;
+         //    border: 0;
+         //    background-color: $color-300;
+         //    background: linear-gradient(
+         //       15deg,
+         //       rgba(31, 29, 29, 1) 30%,
+         //       rgba(36, 183, 172, 1) 100%
+         //    );
+         //    padding: 1.4rem 2rem;
+         // }
+      }
+      .img {
+         align-self: flex-start;
+
+         @media #{$medium} {
+            align-self: center;
+         }
+
+         .aspect-ratio-square {
+            width: 12rem;
+            height: 12rem;
+            margin-left: auto;
+            overflow: hidden;
+            border-radius: calc(
+               #{$origin-border} - ((#{$border-w} / 2) + (#{$card-p} / 2))
+            );
+
+            @media #{$xsmall} {
+               width: 16rem;
+               height: 16rem;
+            }
+            @media #{$large} {
+               width: 20rem;
+               height: 20rem;
+               border-radius: calc(
+                  #{$origin-border-lg} - ((#{$border-w-lg} / 2) +
+                           (#{$card-p-lg} / 2))
+               );
+            }
+            @media #{$xxlarge} {
+               width: 28rem;
+               height: 28rem;
+            }
+
+            figure {
+               width: 100%;
+               height: 100%;
+
+               img {
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+               }
+            }
+         }
+      }
+   }
+
+   article:hover {
+      .cpt {
+         background-color: transparent;
+      }
+
+      &:before {
+         transform: translate(-25%, -25%);
+      }
+
+      .flex-wrap {
+         .content {
+            p,
+            h3 {
+               color: $color-white;
+            }
+         }
+      }
+   }
+}

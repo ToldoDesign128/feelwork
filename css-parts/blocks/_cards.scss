@@ -1,0 +1,136 @@
+.cards {
+   h2 {
+      max-width: 90rem;
+      margin-bottom: 3.2rem;
+
+      @media #{$large} {
+         margin-bottom: 6.4rem;
+      }
+   }
+
+   .cards-row {
+      .card-col {
+         &:nth-child(3n + 1) {
+            .card {
+               background-color: $color-200;
+               p.button {
+                  color: $color-200;
+               }
+            }
+         }
+         &:nth-child(3n + 2) {
+            .card {
+               background-color: $color-300;
+               p.button {
+                  color: $color-300;
+               }
+            }
+         }
+         &:nth-child(3n + 3) {
+            .card {
+               background-color: $color-400;
+               p.button {
+                  color: $color-400;
+               }
+            }
+         }
+
+         margin-bottom: 1.6rem;
+
+         @media #{$large} {
+            margin-bottom: 2rem;
+            padding-inline: 1rem;
+         }
+         @media #{$xxlarge} {
+            margin-bottom: 2.4rem;
+            padding-inline: 1.2rem;
+         }
+      }
+
+      .card {
+         display: inline-flex;
+         flex-direction: column;
+         justify-content: space-between;
+         color: $color-white;
+         text-decoration: none;
+         min-height: 100%;
+         min-width: 100%;
+         transition: all 0.4s ease-in-out;
+
+         padding: 2.4rem;
+         border-radius: calc(8px + (1.6rem / 2));
+
+         @media #{$large} {
+            padding: 3.2rem;
+            border-radius: calc(8px + (3.2rem / 2));
+         }
+
+         figure {
+            border-radius: 8px;
+            overflow: hidden;
+            width: 4.8rem;
+            height: 4.8rem;
+            margin-bottom: 2rem;
+            margin-inline: auto;
+
+            @media #{$xxsmall} {
+               margin-left: 0;
+            }
+
+            @media #{$medium} {
+               width: 6.4rem;
+               height: 6.4rem;
+               margin-bottom: 4rem;
+            }
+
+            img {
+               display: block;
+               height: 100%;
+               width: 100%;
+               object-fit: cover;
+            }
+         }
+
+         h3 {
+            color: $color-white;
+            margin-bottom: 0.8rem;
+
+            @media #{$medium} {
+               margin-bottom: 1.2rem;
+            }
+         }
+
+         p {
+            color: $color-white;
+            line-height: 150%;
+            margin-bottom: 2.4rem;
+            max-width: 50ch;
+            margin-inline: auto;
+
+            @media #{$xxsmall} {
+               margin-left: 0;
+            }
+
+            @media #{$medium} {
+               margin-bottom: 4rem;
+            }
+
+            &.button.button-primary.button-negative {
+               margin-bottom: 0;
+               padding: 1.4rem 2.4rem;
+            }
+         }
+      }
+      .card[href]:hover {
+         box-shadow: 2px 2px 24px rgba(0, 0, 0, 0.16),
+            1px 1px 4px rgba(0, 0, 0, 0.12);
+         transform: translateY(-2px);
+
+         .button.button-primary.button-negative {
+            border-color: rgba($color-white, 0.48);
+            background-color: rgba($color-white, 0.16);
+            color: $color-white;
+         }
+      }
+   }
+}

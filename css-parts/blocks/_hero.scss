@@ -1,0 +1,169 @@
+.hero {
+   background-color: $color-black;
+
+   min-height: 100vh;
+   min-height: 100svh;
+   display: flex;
+   align-items: center;
+
+   background: linear-gradient(77deg, #231f20, #1f7e78, #22beb4);
+   background-size: 800% 800%;
+
+   -webkit-animation: AnimationName 25s ease infinite;
+   -moz-animation: AnimationName 25s ease infinite;
+   -o-animation: AnimationName 25s ease infinite;
+   animation: AnimationName 25s ease infinite;
+
+   .hero-container {
+      margin-top: 8vh;
+
+      .overtitle {
+         color: $color-white;
+      }
+
+      h1 {
+         margin-bottom: 2.4rem;
+      }
+
+      .text {
+         p {
+            margin-bottom: 1.2rem;
+            color: $color-white;
+
+            a {
+               color: $color-white;
+            }
+         }
+      }
+
+      .overtitle,
+      h1,
+      .text {
+         @media #{$xxsmall} {
+            max-width: 80%;
+         }
+
+         @media #{$medium} {
+            max-width: 64%;
+         }
+
+         @media #{$large} {
+            max-width: 50%;
+         }
+
+         @media #{$xxlarge} {
+            max-width: 40%;
+         }
+      }
+
+      .btn-wrapper {
+         margin-top: 2.8rem;
+
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 2.4rem;
+
+         @media #{$xxsmall} {
+            justify-content: start;
+         }
+
+         @media #{$large} {
+            margin-top: 4rem;
+            gap: 3.2rem;
+         }
+      }
+   }
+}
+
+@-webkit-keyframes AnimationName {
+   0% {
+      background-position: 0% 67%;
+   }
+   50% {
+      background-position: 100% 34%;
+   }
+   100% {
+      background-position: 0% 67%;
+   }
+}
+@-moz-keyframes AnimationName {
+   0% {
+      background-position: 0% 67%;
+   }
+   50% {
+      background-position: 100% 34%;
+   }
+   100% {
+      background-position: 0% 67%;
+   }
+}
+@-o-keyframes AnimationName {
+   0% {
+      background-position: 0% 67%;
+   }
+   50% {
+      background-position: 100% 34%;
+   }
+   100% {
+      background-position: 0% 67%;
+   }
+}
+@keyframes AnimationName {
+   0% {
+      background-position: 0% 67%;
+   }
+   50% {
+      background-position: 100% 34%;
+   }
+   100% {
+      background-position: 0% 67%;
+   }
+}
+
+.afterhero {
+   position: relative;
+
+   #afterhero {
+      position: absolute;
+      top: -12rem;
+      @media #{$large} {
+         top: -20rem;
+      }
+   }
+}
+
+// Credits hero
+.page-id-301 .hero.mb-200-r,
+.page-id-301 .hero.mb-160-r {
+   margin-bottom: 0;
+}
+
+// Single CPT
+.single .hero .hero-container {
+   h1.h2-style {
+      font-size: clamp(4rem, 6vw, 6.4rem);
+   }
+
+   .overtitle,
+   h1,
+   .text {
+      @media #{$medium} {
+         max-width: 80%;
+      }
+      @media #{$xlarge} {
+         max-width: 64%;
+      }
+      @media #{$xxlarge} {
+         max-width: 56%;
+      }
+   }
+}
+
+// Gradient Animation color
+#gradient-canvas {
+   --gradient-color-1: #24b7ac;
+   --gradient-color-2: #219d93;
+   --gradient-color-3: #1b7f78;
+   --gradient-color-4: #1f1d1d;
+}

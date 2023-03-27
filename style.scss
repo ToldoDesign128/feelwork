@@ -1,0 +1,44 @@
+/*
+Theme Name: Feelwork
+Theme URI: https://matteobruschetti.it
+Author:  Nicola Gadler, Federico Toldo, Matteo Bruschetti
+Description: Feelwork official WP theme
+Version: 0.1
+Tested up to: 0.0
+Requires PHP: 8.0
+*/
+
+//variables
+@import "css-parts/variables/local-font";
+@import "css-parts/variables/device-screen";
+@import "css-parts/variables/color";
+@import "css-parts/variables/typography";
+@import "css-parts/variables/spacers";
+@import "css-parts/variables/helpers";
+
+//base
+@import "css-parts/base";
+
+//components
+@import "css-parts/components/nav";
+@import "css-parts/components/footer";
+@import "css-parts/components/btn";
+@import "css-parts/components/iubenda";
+@import "css-parts/components/loop-cpt";
+
+//blocks
+@import "css-parts/blocks/hero";
+@import "css-parts/blocks/heading";
+@import "css-parts/blocks/image";
+@import "css-parts/blocks/cards";
+@import "css-parts/blocks/list";
+@import "css-parts/blocks/faq";
+@import "css-parts/blocks/form";
+@import "css-parts/blocks/gmap";
+@import "css-parts/blocks/txt-img";
+@import "css-parts/blocks/youtube-video";
+
+@import "css-parts/blocks/global_contact-cta";
+@import "css-parts/blocks/global_team";
+@import "css-parts/blocks/global_logos";
+@import "css-parts/blocks/global_rev";

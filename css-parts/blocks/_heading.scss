@@ -1,0 +1,10 @@
+.heading {
+   h2 {
+      max-width: 90rem;
+      margin-bottom: 3.2rem;
+
+      @media #{$large} {
+         margin-bottom: 6.4rem;
+      }
+   }
+}
